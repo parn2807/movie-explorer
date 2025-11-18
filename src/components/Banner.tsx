@@ -20,7 +20,7 @@ export default function Banner() {
                 backgroundImage: `url(https://image.tmdb.org/t/p/original/${movie.backdrop_path})`,
             }}
         >
-            <div className="bg-gradient-to-t from-neutral-900 to-transparent w-screen pb-12 pl-12">
+            <div className="bg-gradient-to-t from-neutral-900 to-transparent w-screen pb-12 pl-12 pt-12">
                 <h1 className="text-4xl font-bold">{movie.title}</h1>
                 <p className=" max-w-xl mt-4">{movie.overview}</p>
             </div>
