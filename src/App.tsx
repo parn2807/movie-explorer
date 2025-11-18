@@ -7,7 +7,7 @@ import Search from "./pages/Search";
 export default function App() {
   return (
     <BrowserRouter>
-      <Navbar />
+     <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/movie/:id" element={<MovieDetail />} />

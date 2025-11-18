@@ -2,8 +2,8 @@ import { Link } from "react-router-dom";
 
 export default function Navbar() {
     return (
-        <nav className="fixed top-0 w-full z-50 bg-black bg-opacity-70 p-4 flex justify-between">
-            <Link to="/" className="text-red-500 text-2xl font-bold">
+        <nav className="fixed top-0 bg-black">
+            <Link to="/" className="!text-red- text-2xl font-bold">
                 MOVIEFLIX
             </Link>
 
