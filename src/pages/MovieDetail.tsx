@@ -13,6 +13,7 @@ export default function MovieDetail() {
     if (!movie) return null;
 
     return (
+        
         <div className="bg-black min-h-screen text-white p-10">
             <h1 className="text-4xl font-bold">{movie.title}</h1>
             <p className="mt-4 opacity-80">{movie.overview}</p>

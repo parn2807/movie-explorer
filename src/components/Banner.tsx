@@ -15,14 +15,14 @@ export default function Banner() {
 
     return (
         <div
-            className="h-[70vh] bg-cover bg-center text-white flex items-end p-12"
+            className="h-[70vh] w-dvw bg-cover bg-center text-white flex items-end "
             style={{
                 backgroundImage: `url(https://image.tmdb.org/t/p/original/${movie.backdrop_path})`,
             }}
         >
-            <div>
+            <div className="bg-gradient-to-t from-neutral-900 to-transparent w-screen pb-12 pl-12">
                 <h1 className="text-4xl font-bold">{movie.title}</h1>
-                <p className="max-w-xl mt-4 opacity-80">{movie.overview}</p>
+                <p className=" max-w-xl mt-4">{movie.overview}</p>
             </div>
         </div>
     );

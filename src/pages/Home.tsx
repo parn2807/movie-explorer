@@ -3,12 +3,13 @@ import MovieRow from "../components/MovieRow";
 
 export default function Home() {
     return (
-        <div className="bg-black min-h-screen">
+        <div>
             <Banner />
 
-            <MovieRow title="Trending Now" fetchFunc="trending" />
-            <MovieRow title="Popular" fetchFunc="popular" />
-            <MovieRow title="Top Rated" fetchFunc="topRated" />
+            <div className="flex "><MovieRow title="Trending Now" fetchFunc="trending" /></div>
+            <div><MovieRow title="Popular" fetchFunc="popular" /></div>
+            <div><MovieRow title="Top Rated" fetchFunc="topRated" /></div>
+
         </div>
     );
 }
