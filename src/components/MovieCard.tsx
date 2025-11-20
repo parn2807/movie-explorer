@@ -7,11 +7,11 @@ type Props = {
 export default function MovieCard({ movie }: Props) {
     return (
 
-        <div className="w-50 justify-center">
+        <div className="h-100 flex items-center">
             <Link to={`/movie/${movie.id}`}>
                 <img
                     src={`https://image.tmdb.org/t/p/w300${movie.poster_path}`}
-                    className=" rounded hover:scale-105 duration-200 flex-shrink-0 rounded-lg shadow-lg "
+                    className="h-86 bg-blue-100 rounded hover:scale-105 duration-200 flex-shrink-0 rounded-lg shadow-lg object-cover"
                 />
             </Link>
         </div>

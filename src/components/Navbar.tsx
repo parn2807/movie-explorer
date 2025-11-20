@@ -14,8 +14,8 @@ export default function Navbar() {
 
     return (
         <nav className={`
-                fixed top-0 w-full p-4 flex text-center justify-between z-50 
-                transition-all duration-200
+                fixed top-0 w-screen p-4 flex text-center justify-between z-50 
+                transition-all duration-300
                 ${scrolled
                 ? "bg-neutral-900 shadow-lg"
                 : "bg-gradient-to-b from-neutral-900 to-transparent"}
@@ -25,7 +25,7 @@ export default function Navbar() {
                 MOVIEFLIX
             </Link>
 
-            <div className="flex gap-6 text-white-500 text-lg">
+            <div className="flex gap-6 text-white-500 text-lg pr-12">
                 <Link to="/" className="hover:text-rose-500">Home</Link>
                 <Link to="/search" className="hover:text-rose-500">Search</Link>
             </div>

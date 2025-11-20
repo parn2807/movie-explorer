@@ -20,14 +20,19 @@ export default function MovieRow({ title, fetchFunc }: Props) {
     }, []);
 
     return (
-        <div className="text-white px-6 mt-6">
-            <h2 className="text-xl font-mediam mb-3">{title}</h2>
+        <div className="text-white mt-6">
+            <h2 className="text-xl pl-6 font-mediam mb-3">{title}</h2>
 
-            <div className="flex scroll-smooth flex-shrink-0 bg-red-300  gap-4 ">
-                {movies.map((movie) => (
-                    <MovieCard movie={movie} key={movie.id} />
-                ))}
+            <div className="overflow-x-auto scroll-smooth scrollbar-hide">
+                <div className="flex gap-4 pl-6">
+                    {movies.map((movie) => (
+                        <div key={movie.id} className="flex-shrink-0 min-w-[15%]">
+                            <MovieCard movie={movie}  />
+                        </div>
+                    ))}
+                </div>
             </div>
+
         </div>
     );
 }
