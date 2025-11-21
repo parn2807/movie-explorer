@@ -25,9 +25,9 @@ export default function Navbar() {
                 MOVIEFLIX
             </Link>
 
-            <div className="flex gap-6 text-white-500 text-lg pr-12">
-                <Link to="/" className="hover:text-rose-500">Home</Link>
-                <Link to="/search" className="hover:text-rose-500">Search</Link>
+            <div className="flex text-white-500 items-center">
+                <Link to="/" className="w-20 hover:text-rose-500">Home</Link>
+                <Link to="/search" className="w-20 hover:text-rose-500">Search</Link>
             </div>
         </nav>
     );

@@ -12,25 +12,26 @@ export default function Search() {
     };
 
     return (
-        <div className="bg-black min-h-screen text-white p-6">
-            <input
-                type="text"
-                className="w-full p-3 bg-gray-800 rounded"
-                placeholder="Search movies..."
-                value={query}
-                onChange={(e) => setQuery(e.target.value)}
-            />
+        <div className="min-h-screen w-screen text-white pt-30 ">
+            <div className="bg-blue-300 flex items-center justify-center justify-between gap-2">
+                <input
+                    type="text"
+                    className="h-10 w-100 p-3 bg-slate-600 rounded"
+                    placeholder="Search movies... "
+                    value={query}
+                    onChange={(e) => setQuery(e.target.value)}
+                />
 
-            <button
-                onClick={search}
-                className="bg-red-600 px-4 py-2 mt-4 rounded"
-            >
-                Search
-            </button>
-
-            <div className="grid grid-cols-2 md:grid-cols-5 gap-4 mt-6">
+                <button
+                    onClick={search}
+                    className="hover:bg-rose-900 bg-rose-600 h-10 w-20 rounded"
+                >
+                    Search
+                </button>
+            </div>
+            <div className="grid grid-cols-2 md:grid-cols-5 mt-6 bg-red-300">
                 {movies.map((m) => (
-                    <MovieCard movie={m} key={m.id} />
+                    <MovieCard movie={m} key={m.id}/>
                 ))}
             </div>
         </div>
