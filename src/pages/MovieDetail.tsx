@@ -1,7 +1,7 @@
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { fetchMovieDetail } from "../api/tmdb";
-import Banner from "../components/Banner";
+// import Banner from "../components/Banner";
 
 
 export default function MovieDetail() {

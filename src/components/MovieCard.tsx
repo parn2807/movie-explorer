@@ -11,7 +11,7 @@ export default function MovieCard({ movie }: Props) {
             <Link to={`/movie/${movie.id}`}>
                 <img
                     src={`https://image.tmdb.org/t/p/w300${movie.poster_path}`}
-                    className="h-86 bg-blue-100 rounded hover:scale-105 duration-200 flex-shrink-0 rounded-lg shadow-lg object-cover"
+                    className="h-86 rounded hover:scale-105 duration-200 flex-shrink-0 rounded-lg shadow-lg object-cover"
                 />
             </Link>
         </div>

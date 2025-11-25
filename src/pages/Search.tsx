@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { fetchSearch } from "../api/tmdb";
-import MovieCard from "../components/MovieCard";
+import MovieCardSearch from "../components/MovieCardSearch";
 
 export default function Search() {
     const [query, setQuery] = useState("");
@@ -12,11 +12,11 @@ export default function Search() {
     };
 
     return (
-        <div className="min-h-screen w-screen text-white pt-30 ">
-            <div className="bg-blue-300 flex items-center justify-center justify-between gap-2">
+        <div className="flex flex-col min-h-screen w-screen text-white pt-30 items-center">
+            <div className="flex justify-between gap-2">
                 <input
                     type="text"
-                    className="h-10 w-100 p-3 bg-slate-600 rounded"
+                    className="h-10 w-175 p-3 bg-slate-600 rounded"
                     placeholder="Search movies... "
                     value={query}
                     onChange={(e) => setQuery(e.target.value)}
@@ -29,9 +29,15 @@ export default function Search() {
                     Search
                 </button>
             </div>
-            <div className="grid grid-cols-2 md:grid-cols-5 mt-6 bg-red-300">
+            <div className="grid md:grid-cols-4 grid-cols-4 mt-6 gap-4 p-4">
                 {movies.map((m) => (
-                    <MovieCard movie={m} key={m.id}/>
+                    <div key={m.id} className=" object-cover hover:scale-105 place-items-center place-content-center w-50">
+                        <MovieCardSearch movie={m} />
+                    </div>
+                    // <div className="bg-gray-200 place-content-center place-items-center rounded">
+                    //     <MovieCardSearch movie={m} key={m.id}/>
+                    // </div>
+
                 ))}
             </div>
         </div>
