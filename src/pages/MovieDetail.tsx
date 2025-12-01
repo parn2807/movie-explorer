@@ -1,7 +1,8 @@
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { fetchMovieDetail } from "../api/tmdb";
-// import Banner from "../components/Banner";
+import MovieTrailer from "../components/MovieTrailer";
+
 
 
 export default function MovieDetail() {
@@ -16,16 +17,18 @@ export default function MovieDetail() {
 
     return (
         <div className="">
-            {/* <Banner /> */}
             <div className="flex bg-black-300 w-screen min-h-screen items-center justify-center">
                 <div className=" w-200">
                     <h1 className="text-4xl text-white font-bold">{movie.title}</h1>
                     <p className="mt-4 text-white-300">{movie.overview}</p>
 
-                    <img
+                    <div className="flex gap-4">
+                        <img
                         src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
-                        className="mt-8 rounded w-64"
+                        className="rounded w-64 mt-4"
                     />
+                        <div className="flex w-screen ">{id && <MovieTrailer movieId={id} />}</div>
+                    </div>
                 </div>
             </div>
         </div>

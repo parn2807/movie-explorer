@@ -16,3 +16,4 @@ export const fetchPopular = () => tmdb.get("/movie/popular");
 export const fetchTopRated = () => tmdb.get("/movie/top_rated");
 export const fetchMovieDetail = (id: string) => tmdb.get(`/movie/${id}`);
 export const fetchSearch = (q: string) => tmdb.get(`/search/movie?query=${q}`);
+export const fetchMovieVideos = (id: string) => tmdb.get(`/movie/${id}/videos`);
