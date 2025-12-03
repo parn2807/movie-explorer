@@ -6,7 +6,7 @@ import Search from "./pages/Search";
 
 export default function App() {
   return (
-    <BrowserRouter basename="/movie-explorer">
+    <BrowserRouter>
      <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
